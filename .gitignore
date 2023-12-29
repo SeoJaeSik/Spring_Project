@@ -1,9 +1,25 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,eclipse,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,eclipse,intellij+all
 
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
 ### Eclipse ###
 .metadata
-bin/
 tmp/
 *.tmp
 *.bak
@@ -29,9 +45,6 @@ local.properties
 # CDT- autotools
 .autotools
 
-# Java annotation processor (APT)
-.factorypath
-
 # PDT-specific (PHP Development Tools)
 .buildpath
 
@@ -43,9 +56,6 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
-
-# STS (Spring Tool Suite)
-.springBeans
 
 # Code Recommenders
 .recommenders/
@@ -115,12 +125,6 @@ cmake-build-*/
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
-
-# File-based project format
-*.iws
-
-# IntelliJ
-out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
