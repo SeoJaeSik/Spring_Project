@@ -1,7 +1,6 @@
 package com.spring.start.dao;
 
-import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.SqlSessionFactoryBean;
+import com.spring.start.mapper.StartMapper;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -10,12 +9,20 @@ import org.springframework.stereotype.Repository;
 public class StartDaoRepository implements StartDao {
 
     @Autowired
-    private SqlSessionTemplate sqlSession;
+    private SqlSessionTemplate sqlSessionTemplate;
+
+    @Autowired
+    private StartMapper mapper;
 
     @Override
-    public void getDB() {
+    public void get_time() {
         System.out.println("Dao Execute !");
-        String time = sqlSession.selectOne("start.get_time");
+
+        String time = mapper.getTime();
         System.out.println(time);
+
+        StartMapper startMapper = sqlSessionTemplate.getMapper(StartMapper.class);
+        String time2 = startMapper.getTime();
+        System.out.println(time2);
     }
 }

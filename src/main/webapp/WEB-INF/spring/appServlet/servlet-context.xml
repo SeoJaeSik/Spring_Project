@@ -19,6 +19,10 @@
     <!-- 리소스 불러오기 -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
+    <!-- mybatis 빈등록 관련 -->
+    <mybatis:scan base-package="com.spring.start.mapper"
+                  annotation="org.apache.ibatis.annotations.Mapper"/>
+
     <!-- 패키지 스캔을 통한 빈 등록 설정 -->
     <context:component-scan base-package="com.spring.start.*" name-generator="com.spring.start.common.FullBeanNameGenerator"/>
     <!-- 앞으로 생성할 모든 컨트롤러, 서비스단, Aspect 등  모든 클래스들(*.java)은
