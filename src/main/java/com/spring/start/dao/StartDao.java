@@ -2,6 +2,6 @@ package com.spring.start.dao;
 
 public interface StartDao {
 
-    public void getDB();
+    public void get_time();
 
 }

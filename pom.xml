@@ -96,4 +96,27 @@
 
     </dependencies>
 
+    <build>
+        <!-- 빌드관련 intelliJ는 src내부의 설정파일 못읽어와 추가 -->
+        <!-- resources에 다 옮긴 후 경로설정 or pom.xml에 해당 빌드 설정 추가-->
+        <resources>
+            <!-- src/main/java 폴더의 xml파일들을 빌드에 포함 -->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <!-- xml, properties, yml, setting파일들을 빌드에 포함 -->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
 </project>
